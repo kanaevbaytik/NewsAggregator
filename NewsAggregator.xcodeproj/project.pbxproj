@@ -16,6 +16,7 @@
 		CE27ACDE2E218B7A00FECF74 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27ACDD2E218B7A00FECF74 /* APIService.swift */; };
 		CE27ACE12E218D7E00FECF74 /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27ACE02E218D7E00FECF74 /* NewsArticle.swift */; };
 		CE27AD042E21AC7300FECF74 /* NewsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27AD032E21AC7300FECF74 /* NewsListViewModel.swift */; };
+		CE27AD062E21B95200FECF74 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27AD052E21B95200FECF74 /* NewsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CE27ACDD2E218B7A00FECF74 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		CE27ACE02E218D7E00FECF74 /* NewsArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
 		CE27AD032E21AC7300FECF74 /* NewsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewModel.swift; sourceTree = "<group>"; };
+		CE27AD052E21B95200FECF74 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			children = (
 				CE27ACD92E218A3D00FECF74 /* NewsListViewController.swift */,
 				CE27AD032E21AC7300FECF74 /* NewsListViewModel.swift */,
+				CE27AD052E21B95200FECF74 /* NewsTableViewCell.swift */,
 			);
 			path = NewList;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			files = (
 				CE27ACE12E218D7E00FECF74 /* NewsArticle.swift in Sources */,
 				CE27ACCC2E217F0400FECF74 /* AppDelegate.swift in Sources */,
+				CE27AD062E21B95200FECF74 /* NewsTableViewCell.swift in Sources */,
 				CE27ACCD2E217F0400FECF74 /* SceneDelegate.swift in Sources */,
 				CE27ACDC2E218B2E00FECF74 /* FavoritesViewController.swift in Sources */,
 				CE27ACDE2E218B7A00FECF74 /* APIService.swift in Sources */,
