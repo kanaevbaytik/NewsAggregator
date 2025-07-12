@@ -83,20 +83,11 @@ final class NewsTableViewCell: UITableViewCell {
 
         if let imageURLString = article.image_url,
            let url = URL(string: imageURLString) {
-            loadImage(from: url)
+            ImageLoader.shared.loadImage(from: url) { [weak self] image in
+                self?.thumbnailImageView.image = image ?? UIImage(systemName: "photo")
+            }
         } else {
             thumbnailImageView.image = UIImage(systemName: "photo")
         }
-    }
-
-    private func loadImage(from url: URL) {
-        // Простейшая загрузка изображения (без кеша)
-        URLSession.shared.dataTask(with: url) { [weak self] data, _, _ in
-            guard let data = data,
-                  let image = UIImage(data: data) else { return }
-            DispatchQueue.main.async {
-                self?.thumbnailImageView.image = image
-            }
-        }.resume()
     }
 }
