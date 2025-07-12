@@ -105,20 +105,14 @@ final class NewsDetailViewController: UIViewController {
         
         if let imageURLString = article.image_url,
            let url = URL(string: imageURLString) {
-            loadImage(from: url)
+            ImageLoader.shared.loadImage(from: url) { [weak self] image in
+                self?.imageView.image = image ?? UIImage(systemName: "photo")
+            }
         } else {
             imageView.image = UIImage(systemName: "photo")
         }
     }
-    private func loadImage(from url: URL) {
-        URLSession.shared.dataTask(with: url) { [weak self] data , _, _ in
-            guard let data = data,
-                  let image = UIImage(data: data) else { return }
-            DispatchQueue.main.async {
-                self?.imageView.image = image
-            }
-        }.resume()
-    }
+
     @objc private func openSource() {
         guard let urlString = article.link, let url = URL(string: urlString) else { return }
         let safariVC = SFSafariViewController(url: url)

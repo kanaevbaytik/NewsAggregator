@@ -19,6 +19,7 @@
 		CE27AD062E21B95200FECF74 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27AD052E21B95200FECF74 /* NewsTableViewCell.swift */; };
 		CE27AD082E226A8A00FECF74 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27AD072E226A8A00FECF74 /* NewsDetailViewController.swift */; };
 		CE27AD0A2E22819D00FECF74 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27AD092E22819D00FECF74 /* FavoritesManager.swift */; };
+		CE27AD0C2E228CB200FECF74 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27AD0B2E228CB200FECF74 /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		CE27AD052E21B95200FECF74 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		CE27AD072E226A8A00FECF74 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		CE27AD092E22819D00FECF74 /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
+		CE27AD0B2E228CB200FECF74 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,15 +70,13 @@
 		CE27ACCB2E217F0400FECF74 /* NewsAggregator */ = {
 			isa = PBXGroup;
 			children = (
+				CE27AD0D2E228EE600FECF74 /* App */,
 				CE27ACDF2E218D5900FECF74 /* Models */,
 				CE27ACD22E2187CC00FECF74 /* Modules */,
 				CE27ACC62E217F0400FECF74 /* Info.plist */,
-				CE27ACC82E217F0400FECF74 /* LaunchScreen.storyboard */,
-				CE27ACC92E217F0400FECF74 /* SceneDelegate.swift */,
 				CE27ACD52E21880000FECF74 /* Utils */,
 				CE27ACD42E2187EC00FECF74 /* Resources */,
 				CE27ACD32E2187E500FECF74 /* Services */,
-				CE27ACC42E217F0400FECF74 /* AppDelegate.swift */,
 			);
 			path = NewsAggregator;
 			sourceTree = "<group>";
@@ -86,7 +86,7 @@
 			children = (
 				CE27ACD82E21894D00FECF74 /* NewsDetail */,
 				CE27ACD72E21893300FECF74 /* Favorites */,
-				CE27ACD62E21891E00FECF74 /* NewList */,
+				CE27ACD62E21891E00FECF74 /* NewsList */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -96,6 +96,7 @@
 			children = (
 				CE27ACDD2E218B7A00FECF74 /* APIService.swift */,
 				CE27AD092E22819D00FECF74 /* FavoritesManager.swift */,
+				CE27AD0B2E228CB200FECF74 /* ImageLoader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -104,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				CE27ACC52E217F0400FECF74 /* Assets.xcassets */,
+				CE27ACC82E217F0400FECF74 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -115,14 +117,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		CE27ACD62E21891E00FECF74 /* NewList */ = {
+		CE27ACD62E21891E00FECF74 /* NewsList */ = {
 			isa = PBXGroup;
 			children = (
 				CE27ACD92E218A3D00FECF74 /* NewsListViewController.swift */,
 				CE27AD032E21AC7300FECF74 /* NewsListViewModel.swift */,
 				CE27AD052E21B95200FECF74 /* NewsTableViewCell.swift */,
 			);
-			path = NewList;
+			path = NewsList;
 			sourceTree = "<group>";
 		};
 		CE27ACD72E21893300FECF74 /* Favorites */ = {
@@ -147,6 +149,15 @@
 				CE27ACE02E218D7E00FECF74 /* NewsArticle.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CE27AD0D2E228EE600FECF74 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CE27ACC92E217F0400FECF74 /* SceneDelegate.swift */,
+				CE27ACC42E217F0400FECF74 /* AppDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +238,7 @@
 				CE27ACCC2E217F0400FECF74 /* AppDelegate.swift in Sources */,
 				CE27AD062E21B95200FECF74 /* NewsTableViewCell.swift in Sources */,
 				CE27ACCD2E217F0400FECF74 /* SceneDelegate.swift in Sources */,
+				CE27AD0C2E228CB200FECF74 /* ImageLoader.swift in Sources */,
 				CE27ACDC2E218B2E00FECF74 /* FavoritesViewController.swift in Sources */,
 				CE27ACDE2E218B7A00FECF74 /* APIService.swift in Sources */,
 				CE27AD082E226A8A00FECF74 /* NewsDetailViewController.swift in Sources */,
