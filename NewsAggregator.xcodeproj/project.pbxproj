@@ -84,6 +84,7 @@
 		CE27ACD22E2187CC00FECF74 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CE27AD0E2E22973C00FECF74 /* Shared */,
 				CE27ACD82E21894D00FECF74 /* NewsDetail */,
 				CE27ACD72E21893300FECF74 /* Favorites */,
 				CE27ACD62E21891E00FECF74 /* NewsList */,
@@ -122,7 +123,6 @@
 			children = (
 				CE27ACD92E218A3D00FECF74 /* NewsListViewController.swift */,
 				CE27AD032E21AC7300FECF74 /* NewsListViewModel.swift */,
-				CE27AD052E21B95200FECF74 /* NewsTableViewCell.swift */,
 			);
 			path = NewsList;
 			sourceTree = "<group>";
@@ -158,6 +158,14 @@
 				CE27ACC42E217F0400FECF74 /* AppDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		CE27AD0E2E22973C00FECF74 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CE27AD052E21B95200FECF74 /* NewsTableViewCell.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
