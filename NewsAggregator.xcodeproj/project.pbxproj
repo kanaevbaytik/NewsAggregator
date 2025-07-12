@@ -20,6 +20,7 @@
 		CE27AD082E226A8A00FECF74 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27AD072E226A8A00FECF74 /* NewsDetailViewController.swift */; };
 		CE27AD0A2E22819D00FECF74 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27AD092E22819D00FECF74 /* FavoritesManager.swift */; };
 		CE27AD0C2E228CB200FECF74 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27AD0B2E228CB200FECF74 /* ImageLoader.swift */; };
+		CE27AD112E22DF7800FECF74 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27AD102E22DF7800FECF74 /* EmptyStateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		CE27AD072E226A8A00FECF74 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		CE27AD092E22819D00FECF74 /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
 		CE27AD0B2E228CB200FECF74 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		CE27AD102E22DF7800FECF74 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				CE27AD052E21B95200FECF74 /* NewsTableViewCell.swift */,
+				CE27AD102E22DF7800FECF74 /* EmptyStateView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				CE27AD062E21B95200FECF74 /* NewsTableViewCell.swift in Sources */,
 				CE27ACCD2E217F0400FECF74 /* SceneDelegate.swift in Sources */,
 				CE27AD0C2E228CB200FECF74 /* ImageLoader.swift in Sources */,
+				CE27AD112E22DF7800FECF74 /* EmptyStateView.swift in Sources */,
 				CE27ACDC2E218B2E00FECF74 /* FavoritesViewController.swift in Sources */,
 				CE27ACDE2E218B7A00FECF74 /* APIService.swift in Sources */,
 				CE27AD082E226A8A00FECF74 /* NewsDetailViewController.swift in Sources */,

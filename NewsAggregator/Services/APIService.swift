@@ -24,7 +24,7 @@ final class APIService {
         
         let (data, _) = try await URLSession.shared.data(from: url)
         
-        print(String(data: data, encoding: .utf8) ?? "no data")
+//        print(String(data: data, encoding: .utf8) ?? "no data")
 
         let decoded = try JSONDecoder().decode(NewsResponse.self, from: data)
         return decoded.results
