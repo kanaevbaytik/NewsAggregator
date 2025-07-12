@@ -1,6 +1,6 @@
 import UIKit
 
-class NewsTableViewCell: UITableViewCell {
+final class NewsTableViewCell: UITableViewCell {
     
     static let identifier = "NewsTableViewCell"
 
