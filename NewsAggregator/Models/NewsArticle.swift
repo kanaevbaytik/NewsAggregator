@@ -1,11 +1,11 @@
 
 import Foundation
 
-struct NewsResponse: Codable {
+struct NewsResponse: Codable{
     let results: [NewsArticle]
 }
 
-struct NewsArticle: Codable {
+struct NewsArticle: Codable, Equatable, Hashable {
     let title: String?
     let link: String?
     let pubDate: String?

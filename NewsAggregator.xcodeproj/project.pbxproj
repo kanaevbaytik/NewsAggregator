@@ -17,6 +17,8 @@
 		CE27ACE12E218D7E00FECF74 /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27ACE02E218D7E00FECF74 /* NewsArticle.swift */; };
 		CE27AD042E21AC7300FECF74 /* NewsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27AD032E21AC7300FECF74 /* NewsListViewModel.swift */; };
 		CE27AD062E21B95200FECF74 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27AD052E21B95200FECF74 /* NewsTableViewCell.swift */; };
+		CE27AD082E226A8A00FECF74 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27AD072E226A8A00FECF74 /* NewsDetailViewController.swift */; };
+		CE27AD0A2E22819D00FECF74 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27AD092E22819D00FECF74 /* FavoritesManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		CE27ACE02E218D7E00FECF74 /* NewsArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
 		CE27AD032E21AC7300FECF74 /* NewsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewModel.swift; sourceTree = "<group>"; };
 		CE27AD052E21B95200FECF74 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		CE27AD072E226A8A00FECF74 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		CE27AD092E22819D00FECF74 /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				CE27ACDD2E218B7A00FECF74 /* APIService.swift */,
+				CE27AD092E22819D00FECF74 /* FavoritesManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 		CE27ACD82E21894D00FECF74 /* NewsDetail */ = {
 			isa = PBXGroup;
 			children = (
+				CE27AD072E226A8A00FECF74 /* NewsDetailViewController.swift */,
 			);
 			path = NewsDetail;
 			sourceTree = "<group>";
@@ -217,11 +223,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE27ACE12E218D7E00FECF74 /* NewsArticle.swift in Sources */,
+				CE27AD0A2E22819D00FECF74 /* FavoritesManager.swift in Sources */,
 				CE27ACCC2E217F0400FECF74 /* AppDelegate.swift in Sources */,
 				CE27AD062E21B95200FECF74 /* NewsTableViewCell.swift in Sources */,
 				CE27ACCD2E217F0400FECF74 /* SceneDelegate.swift in Sources */,
 				CE27ACDC2E218B2E00FECF74 /* FavoritesViewController.swift in Sources */,
 				CE27ACDE2E218B7A00FECF74 /* APIService.swift in Sources */,
+				CE27AD082E226A8A00FECF74 /* NewsDetailViewController.swift in Sources */,
 				CE27AD042E21AC7300FECF74 /* NewsListViewModel.swift in Sources */,
 				CE27ACDA2E218A3D00FECF74 /* NewsListViewController.swift in Sources */,
 			);
