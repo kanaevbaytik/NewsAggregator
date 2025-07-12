@@ -42,10 +42,43 @@ final class NewsListViewModel {
             fetchNews()
         }
     }
+    
+    func refreshNews(completion: @escaping () -> Void) {
+        page = 1
+        hasMoreData = true
+
+        isLoading = true
+
+        Task {
+            do {
+                let newArticles = try await APIService.shared.fetchNews(page: page)
+
+                articles = newArticles
+                page += 1
+                isLoading = false
+
+                DispatchQueue.main.async {
+                    self.onUpdate?()
+                    completion()
+                }
+            } catch {
+                isLoading = false
+                print("Ошибка при обновлении новостей:", error)
+                DispatchQueue.main.async {
+                    completion()
+                }
+            }
+        }
+    }
+
 
     func article(at index: Int) -> NewsArticle {
-        articles[index]
+        guard index < articles.count else {
+            return NewsArticle(title: "Ошибка", link: nil, pubDate: nil, image_url: nil, description: "Индекс вне диапазона", creator: nil)
+        }
+        return articles[index]
     }
+
     
     var count: Int {
         articles.count

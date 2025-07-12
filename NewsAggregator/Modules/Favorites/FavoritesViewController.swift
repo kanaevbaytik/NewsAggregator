@@ -5,6 +5,7 @@ final class FavoritesViewController: UIViewController {
     private let tableView = UITableView()
     private let emptyView = EmptyStateView(message: "У вас пока нет избранных новостей")
     
+    
     private var favorites: [NewsArticle] = [] {
         didSet {
             updateUI()
