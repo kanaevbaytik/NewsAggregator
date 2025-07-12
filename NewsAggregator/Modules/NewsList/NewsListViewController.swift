@@ -5,7 +5,8 @@ final class NewsListViewController: UIViewController {
     
     private let tableView = UITableView()
     private let viewModel = NewsListViewModel()
-
+    private let refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -22,9 +23,12 @@ final class NewsListViewController: UIViewController {
         tableView.delegate = self
         tableView.register(NewsTableViewCell.self, forCellReuseIdentifier: NewsTableViewCell.identifier)
         
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refreshNews), for: .valueChanged)
+        
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableView.automaticDimension
-
+        
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
@@ -36,6 +40,12 @@ final class NewsListViewController: UIViewController {
     private func bindViewModel() {
         viewModel.onUpdate = { [weak self] in
             self?.tableView.reloadData()
+        }
+    }
+    
+    @objc private func refreshNews() {
+        viewModel.refreshNews {
+            self.refreshControl.endRefreshing()
         }
     }
 }
