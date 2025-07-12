@@ -1,7 +1,7 @@
 
 import UIKit
 
-class NewsListViewController: UIViewController {
+final class NewsListViewController: UIViewController {
     
     private let tableView = UITableView()
     private let viewModel = NewsListViewModel()
