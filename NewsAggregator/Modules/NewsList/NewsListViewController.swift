@@ -51,6 +51,7 @@ extension NewsListViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         cell.configure(with: article)
+        viewModel.fetchMoreIfNeeded(currentIndex: indexPath.row)
         return cell
     }
     
