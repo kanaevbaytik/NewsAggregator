@@ -6,6 +6,7 @@ final class NewsListViewController: UIViewController {
     private let tableView = UITableView()
     private let viewModel = NewsListViewModel()
     private let refreshControl = UIRefreshControl()
+    private let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,6 +16,10 @@ final class NewsListViewController: UIViewController {
         
         bindViewModel()
         viewModel.fetchNews()
+        navigationItem.searchController = searchController
+        searchController.searchBar.placeholder = "Search..."
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.delegate = self
     }
     private func setupTableView() {
         view.addSubview(tableView)
@@ -70,5 +75,11 @@ extension NewsListViewController: UITableViewDataSource, UITableViewDelegate {
         let detailVC = NewsDetailViewController(article: article)
         navigationController?.pushViewController(detailVC, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension NewsListViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.filter(with: searchText)
     }
 }
