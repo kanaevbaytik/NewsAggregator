@@ -60,7 +60,7 @@ final class NewsListViewModel {
 
     func article(at index: Int) -> NewsArticle {
         guard index < filteredArticles.count else {
-            return NewsArticle(title: "Ошибка", link: nil, pubDate: nil, image_url: nil, description: "Индекс вне диапазона", creator: nil)
+            return NewsArticle(title: "Ошибка", link: nil, pubDate: nil, image_url: nil, description: "Индекс вне диапазона", creator: nil, keywords: nil)
         }
         return filteredArticles[index]
     }
@@ -71,7 +71,7 @@ final class NewsListViewModel {
     
     func latestArticle(at index: Int) -> NewsArticle {
         guard index < latestArticles.count else {
-            return NewsArticle(title: "Ошибка", link: nil, pubDate: nil, image_url: nil, description: "Индекс вне диапазона", creator: nil)
+            return NewsArticle(title: "Ошибка", link: nil, pubDate: nil, image_url: nil, description: "Индекс вне диапазона", creator: nil, keywords: nil)
         }
         return latestArticles[index]
     }
