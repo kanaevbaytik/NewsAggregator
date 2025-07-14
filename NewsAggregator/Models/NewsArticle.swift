@@ -12,4 +12,5 @@ struct NewsArticle: Codable, Equatable, Hashable {
     let image_url: String?
     let description: String?
     let creator: [String]?
+    let keywords: [String]?
 }
