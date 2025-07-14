@@ -83,7 +83,6 @@ extension CategoriesFilterView: UICollectionViewDataSource, UICollectionViewDele
         delegate?.didSelectCategory(key: selectedCategoryKey)
     }
     
-    // ✅ Вот ключ: расчёт ширины по содержимому
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
