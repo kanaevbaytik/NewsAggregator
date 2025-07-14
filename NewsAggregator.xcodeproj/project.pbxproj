@@ -92,7 +92,6 @@
 		CE27ACD22E2187CC00FECF74 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				CE27AD0E2E22973C00FECF74 /* Shared */,
 				CE27ACD82E21894D00FECF74 /* NewsDetail */,
 				CE27ACD72E21893300FECF74 /* Favorites */,
 				CE27ACD62E21891E00FECF74 /* NewsList */,
@@ -129,8 +128,9 @@
 		CE27ACD62E21891E00FECF74 /* NewsList */ = {
 			isa = PBXGroup;
 			children = (
-				CE27ACD92E218A3D00FECF74 /* NewsListViewController.swift */,
-				CE27AD032E21AC7300FECF74 /* NewsListViewModel.swift */,
+				CECFA8422E24CB620093855C /* ViewModel */,
+				CECFA8412E24CB490093855C /* View */,
+				CECFA8402E24CB1E0093855C /* ViewController */,
 			);
 			path = NewsList;
 			sourceTree = "<group>";
@@ -138,7 +138,8 @@
 		CE27ACD72E21893300FECF74 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
-				CE27ACDB2E218B2E00FECF74 /* FavoritesViewController.swift */,
+				CECFA8442E24CBC70093855C /* View */,
+				CECFA8432E24CB780093855C /* ViewController */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -168,16 +169,47 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		CE27AD0E2E22973C00FECF74 /* Shared */ = {
+		CECFA8402E24CB1E0093855C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE27ACD92E218A3D00FECF74 /* NewsListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CECFA8412E24CB490093855C /* View */ = {
 			isa = PBXGroup;
 			children = (
 				CE27AD052E21B95200FECF74 /* NewsTableViewCell.swift */,
-				CE27AD102E22DF7800FECF74 /* EmptyStateView.swift */,
 				CE27AD122E2449DB00FECF74 /* LatestNewsCollectionViewCell.swift */,
 				CECFA83C2E24650C0093855C /* CategoriesFilterView.swift */,
 				CECFA83E2E2465350093855C /* CategoryCell.swift */,
 			);
-			path = Shared;
+			path = View;
+			sourceTree = "<group>";
+		};
+		CECFA8422E24CB620093855C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE27AD032E21AC7300FECF74 /* NewsListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CECFA8432E24CB780093855C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE27ACDB2E218B2E00FECF74 /* FavoritesViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CECFA8442E24CBC70093855C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE27AD102E22DF7800FECF74 /* EmptyStateView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

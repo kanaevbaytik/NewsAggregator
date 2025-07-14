@@ -2,24 +2,26 @@ import SafariServices
 import UIKit
 
 final class NewsDetailViewController: UIViewController {
+    
+    // MARK: - Properties
     private let article: NewsArticle
-    
-    private let scrollView = UIScrollView()
-    private let stackView = UIStackView()
-    
-    private let imageView = UIImageView()
-    private let titleLabel = UILabel()
-    private let authorLabel = UILabel()
-    private let dateLabel = UILabel()
-    private let descriptionLabel = UILabel()
-    private let sourceButton = UIButton(type: .system)
     
     private var isFavorite: Bool = false {
         didSet {
             updateFavoriteIcon()
         }
     }
-    
+    // MARK: - UI Elements
+    private let scrollView = UIScrollView()
+    private let stackView = UIStackView()
+    private let imageView = UIImageView()
+    private let titleLabel = UILabel()
+    private let authorLabel = UILabel()
+    private let dateLabel = UILabel()
+    private let descriptionLabel = UILabel()
+    private let sourceButton = UIButton(type: .system)
+
+    // MARK: - Initialization
     init(article: NewsArticle) {
         self.article = article
         super.init(nibName: nil, bundle: nil)
@@ -28,14 +30,14 @@ final class NewsDetailViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         configure()
         isFavorite = FavoritesManager.shared.isFavorite(article)
     }
-    
+    // MARK: - Setup Methods
     private func setupUI() {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(scrollView)
@@ -47,7 +49,6 @@ final class NewsDetailViewController: UIViewController {
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
 
-        // ⚠️ ВАЖНО: добавляем stackView внутрь scrollView
         stackView.axis = .vertical
         stackView.spacing = 12
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -61,7 +62,6 @@ final class NewsDetailViewController: UIViewController {
             stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -32)
         ])
 
-        // Элементы
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 12
@@ -83,12 +83,10 @@ final class NewsDetailViewController: UIViewController {
         sourceButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         sourceButton.addTarget(self, action: #selector(openSource), for: .touchUpInside)
 
-        // Добавляем в stackView
         [imageView, titleLabel, authorLabel, dateLabel, descriptionLabel, sourceButton].forEach {
             stackView.addArrangedSubview($0)
         }
         
-        // Навбар кнопка
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(systemName: "star"),
             style: .plain,
@@ -96,7 +94,7 @@ final class NewsDetailViewController: UIViewController {
             action: #selector(toggleFavorite)
         )
     }
-
+    // MARK: - Configuration
     private func configure() {
         titleLabel.text = article.title
         authorLabel.text = "Автор: \(article.creator?.first ?? "неизвестен")"
